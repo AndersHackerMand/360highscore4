@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="highscoresModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Faceit">
+      <EntityTypeMapping TypeName="highscoresModel.Faceit">
+        <MappingFragment StoreEntitySet="Faceit">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Navn" ColumnName="Navn" />
+          <ScalarProperty Name="Elo" ColumnName="Elo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tetris">
+      <EntityTypeMapping TypeName="highscoresModel.Tetris">
+        <MappingFragment StoreEntitySet="Tetris">
+          <ScalarProperty Name="Navn" ColumnName="Navn" />
+          <ScalarProperty Name="Point" ColumnName="Point" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
