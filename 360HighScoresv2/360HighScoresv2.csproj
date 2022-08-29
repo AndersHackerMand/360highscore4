@@ -129,8 +129,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\FaceitsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\kategoriController.cs" />
+    <Compile Include="Controllers\TetrisController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,7 +211,16 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\kategori\TetrisLB.cshtml" />
+    <Content Include="Views\Tetris\Create.cshtml" />
+    <Content Include="Views\Tetris\Delete.cshtml" />
+    <Content Include="Views\Tetris\Details.cshtml" />
+    <Content Include="Views\Tetris\Edit.cshtml" />
+    <Content Include="Views\Tetris\Index.cshtml" />
+    <Content Include="Views\Faceits\Create.cshtml" />
+    <Content Include="Views\Faceits\Delete.cshtml" />
+    <Content Include="Views\Faceits\Details.cshtml" />
+    <Content Include="Views\Faceits\Edit.cshtml" />
+    <Content Include="Views\Faceits\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
