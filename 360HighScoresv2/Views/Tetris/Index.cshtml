@@ -42,6 +42,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Point)
             </td>
+            <td>
+
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+
         </tr>
     }
 
