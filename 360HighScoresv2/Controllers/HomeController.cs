@@ -13,6 +13,14 @@ namespace _360HighScoresv2.Controllers
             return View();
         }
 
+        public ActionResult Kategorier() {
+            return View();
+        }
+
+        public ActionResult LOGIN() {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
