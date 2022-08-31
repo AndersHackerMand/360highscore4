@@ -1,9 +1,8 @@
-﻿@model IEnumerable<_360HighScoresv2.Models.Tetris>
-
+﻿
 @{
-    ViewBag.Title = "Tetris";
-
+    ViewBag.Title = "Liste";
 }
+@model IEnumerable<_360HighScoresv2.Models.Tetris>
 @{
     var modelOrdered = Model.OrderByDescending(m => m.Point);
     int rang = 1;
@@ -12,9 +11,7 @@
 
 <h2>Tetris</h2>
 
-<p>
-    @Html.ActionLink("Tilføj score", "Create")
-</p>
+
 <table class="table" id="Table">
     <tr>
         <th>
@@ -42,10 +39,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Point)
             </td>
-            <td>
 
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-            </td>
 
         </tr>
     }

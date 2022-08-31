@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.IO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -7,6 +8,11 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using _360HighScoresv2.Models;
+using System.Net.Mail;
+using System.Net.Configuration;
+using System.Configuration;
+
+
 
 namespace _360HighScoresv2.Controllers
 {
@@ -20,7 +26,15 @@ namespace _360HighScoresv2.Controllers
             var tetris = db.Tetris.OrderByDescending(m => m.Point);
             return View(tetris);
         }
+        public ActionResult SendFile()
+        {
+            return View();
+        }
 
+        public ActionResult ProcessFile()
+        {
+            return View();
+        }
         // GET: Tetris/Details/5
         public ActionResult Details(int? id)
         {
@@ -35,7 +49,11 @@ namespace _360HighScoresv2.Controllers
             }
             return View(tetris);
         }
-
+        public ActionResult Liste()
+        {
+            var tetris = db.Tetris.OrderByDescending(m => m.Point);
+            return View(tetris);
+        }
         // GET: Tetris/Create
         public ActionResult Create()
         {
@@ -59,6 +77,9 @@ namespace _360HighScoresv2.Controllers
             return View(tetris);
         }
 
+        
+
+        
         // GET: Tetris/Edit/5
         public ActionResult Edit(int? id)
         {

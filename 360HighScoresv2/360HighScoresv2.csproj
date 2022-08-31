@@ -221,6 +221,9 @@
     <Content Include="Views\Faceits\Details.cshtml" />
     <Content Include="Views\Faceits\Edit.cshtml" />
     <Content Include="Views\Faceits\Index.cshtml" />
+    <Content Include="Views\Tetris\Liste.cshtml" />
+    <Content Include="Views\Tetris\SendFile.cshtml" />
+    <Content Include="Views\Tetris\ProcessFile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
