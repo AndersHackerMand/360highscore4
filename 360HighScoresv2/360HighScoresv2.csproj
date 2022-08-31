@@ -129,8 +129,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\FaceitsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\kategoriController.cs" />
+    <Compile Include="Controllers\TetrisController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -166,11 +167,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Media\60.jpg" />
-    <Content Include="Media\bagground.jpg" />
-    <Content Include="Media\ff.jpg" />
-    <Content Include="Media\tetris.jpg" />
-    <Content Include="Media\tetrisb.jpg" />
     <Content Include="Models\scoredata.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>scoredata.Context.cs</LastGenOutput>
@@ -201,7 +197,6 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Style\Style.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -214,10 +209,18 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Kategorier.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\kategori\TetrisLB.cshtml" />
-    <Content Include="Views\Home\LOGIN.cshtml" />
+    <Content Include="Views\Tetris\Create.cshtml" />
+    <Content Include="Views\Tetris\Delete.cshtml" />
+    <Content Include="Views\Tetris\Details.cshtml" />
+    <Content Include="Views\Tetris\Edit.cshtml" />
+    <Content Include="Views\Tetris\Index.cshtml" />
+    <Content Include="Views\Faceits\Create.cshtml" />
+    <Content Include="Views\Faceits\Delete.cshtml" />
+    <Content Include="Views\Faceits\Details.cshtml" />
+    <Content Include="Views\Faceits\Edit.cshtml" />
+    <Content Include="Views\Faceits\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
