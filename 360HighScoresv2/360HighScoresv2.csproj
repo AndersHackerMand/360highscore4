@@ -224,6 +224,7 @@
     <Content Include="Views\Tetris\Liste.cshtml" />
     <Content Include="Views\Tetris\SendFile.cshtml" />
     <Content Include="Views\Tetris\ProcessFile.cshtml" />
+    <Content Include="Views\Home\Kategorier.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
