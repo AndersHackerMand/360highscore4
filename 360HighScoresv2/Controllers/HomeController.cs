@@ -13,7 +13,7 @@ namespace _360HighScoresv2.Controllers
             return View();
         }
 
-        public ActionResult Kategori() {
+        public ActionResult Kategorier() {
             return View();
         }
         
