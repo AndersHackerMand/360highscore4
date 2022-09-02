@@ -21,5 +21,10 @@ namespace _360HighScoresv2.Controllers
             return View();
         }
 
+        public ActionResult Indsendscore()
+        {
+            return View();
+        }
+
     }
 }

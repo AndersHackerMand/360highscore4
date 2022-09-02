@@ -226,6 +226,7 @@
     <Content Include="Views\Home\Kategorier.cshtml" />
     <Content Include="Views\Faceits\Liste.cshtml" />
     <Content Include="Views\Home\AdminKategorier.cshtml" />
+    <Content Include="Views\Home\Indsendscore.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
