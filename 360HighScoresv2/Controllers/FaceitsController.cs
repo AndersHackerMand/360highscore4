@@ -20,6 +20,11 @@ namespace _360HighScoresv2.Controllers
             var Csgo = db.Faceit.OrderByDescending(m => m.Elo);
             return View(Csgo);
         }
+        public ActionResult Liste()
+        {
+            var Csgo = db.Faceit.OrderByDescending(m => m.Elo);
+            return View(Csgo);
+        }
 
         // GET: Faceits/Details/5
         public ActionResult Details(int? id)
