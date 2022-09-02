@@ -1,6 +1,6 @@
 ﻿body {
     background-color: #192b38;
-    font-family: Mont, serif;
+    font-family: Halvetica, monospace; !important;
     color: white;
     background-image: url('../Media/60.jpg');
 }
@@ -28,6 +28,7 @@
 
 .high {
     color: #192b38;
+    font-weight:bold;
 }
 
 .højre {

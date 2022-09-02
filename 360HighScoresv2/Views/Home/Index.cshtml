@@ -1,15 +1,21 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Forside - 360Highscores";
 }
 
 
 
 <div class="jumbotron">
-    <h1 class="hvad"><span class="high"></span><span class="high"> <span class="tre">360</span>Highscores</span></h1>
+    <h2 class="high">Hvad er <span class="tre">360</span>Highscores?</h2>
+    
+    <h3 class="high">Hos <span class="tre">360</span>Highscores samler vi highscores fra elever. Disse highscores kan komme fra
+        forskellige spil såsom Tetris, FACEIT eller Minesweeper. Har du en highscore? så 
+        kan du tilføje den og konkurre om at blive den bedste.
+    </h3>
+    <h3 class="high">Held og lykke!</h3>
 
     <button type="button" class="button button2"onclick="location.href='@Url.Action("Kategorier", "Home")'">Spil - Kategorier</button>
-    
+
     <button class="button button2">Tilmeld et spil</button>
-    
-    
+
+
 </div>
