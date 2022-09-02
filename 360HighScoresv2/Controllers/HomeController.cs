@@ -13,26 +13,10 @@ namespace _360HighScoresv2.Controllers
             return View();
         }
 
-        public ActionResult Kategorier() {
+        public ActionResult Kategori() {
             return View();
         }
-
-        public ActionResult LOGIN() {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
+        
+        
     }
 }
