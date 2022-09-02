@@ -20,13 +20,14 @@
                 </button>
                 @Html.ActionLink("360Highscores", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse" >
+            <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Tilmeld et spil", "Kategorier", "Home")</li>
                     <li>@Html.ActionLink("Indsend din score", "Kategorier", "Home")</li>
                 </ul>
                 <ul class="nav navbar-nav højre">
-                    <li>@Html.ActionLink("Admin", "AdminKategorier")</li>
+              
+                    <li style="opacity:0%">@Html.ActionLink("Admin", "AdminKategorier", "Home")</li>
                 </ul>
             </div>
 
