@@ -16,7 +16,10 @@ namespace _360HighScoresv2.Controllers
         public ActionResult Kategorier() {
             return View();
         }
-        
-        
+        public ActionResult AdminKategorier()
+        {
+            return View();
+        }
+
     }
 }
