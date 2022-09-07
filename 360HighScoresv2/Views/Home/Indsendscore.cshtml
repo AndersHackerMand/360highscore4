@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Indsendscore";
+}
+<style>
+    input{
+        color:black;
+    }
+    textarea{
+        color:black;
+    }
+</style>
+<h2>Indsendscore</h2>
+<form action="https://formspree.io/f/xrgdella"
+      method="POST">
+    <label>
+        Din email:
+        <input type="email" name="email">
+    </label>
+    <br />
+    <label>
+        Hvilket spil?:
+        <textarea name="message"></textarea>
+    </label>
+    <br />
+    <!-- your other form fields go here -->
+    <label>
+        Imgur link til billed af highscore:
+        <textarea name="message"></textarea>
+    </label>
+    <button type="submit">Send</button>
+</form>
