@@ -6,69 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body class="bg-gray-600 text-gray-700 bg-white" style="font-family: 'Source Sans Pro', sans-serif">
-<nav class="bg-gray-800">
-  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-    <div class="relative flex h-16 items-center justify-between">
-      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-        <!-- Mobile menu button-->
-        <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-          <span class="sr-only">Åben hoved menu</span>
-          <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
-          </svg>
-          <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-          </svg>
-        </button>
-      </div>
-      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start font-bold">
-        <div class="flex flex-shrink-0 items-center text-orange-600">
-          360
-        </div>
-        <div class="flex flex-shrink-0 items-center text-white">
-          Highscores
-        </div>
-        <div class="hidden sm:ml-6 sm:block">
-          <div class="flex space-x-4">
-            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
-  
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Kategorier</a>
-  
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Indsend score</a>
-  
-          </div>
-        </div>
-      </div>
-      <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-        <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-          <span class="sr-only">View notifications</span>
-          <!-- Heroicon name: outline/bell -->
-          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"/>
-          </svg>
-        </button>
-  
-      </div>
-    </div>
-  </div>
-  
-  <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="sm:hidden" id="mobile-menu">
-    <div class="space-y-1 px-2 pt-2 pb-3">
-      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-      <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
-  
-      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
-  
-      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-  
-      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
-    </div>
-  </div>
-</nav>
-<div class="font-sans bg-white flex flex-col min-h-screen w-full">
+<body class="  bg-gray-600 text-gray-700" style="font-family: 'Source Sans Pro', sans-serif">
+
+<div class="font-sans flex flex-col min-h-screen w-full">
   <div>
     <div class="bg-gray-700 px-4">
       <div
@@ -84,11 +24,14 @@
           <h1
             class="font-bold text-white text-xl sm:text-2xl md:text-5xl leading-tight mb-6"
           >
-            A simple and smart tool that will help grow your business
+            <span class="text-orange-600">360</span>Highscores, hvad er vi?
           </h1>
 
           <p class="text-white md:text-xl md:px-18">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit hello.
+            Hos <span class="text-orange-600">360</span>Highscores kan du indsende dine vilde highscores i forskellige spil såsom, FACEIT, 
+            Tetris eller minesweeper. Highscoren bliver sammenlignet med andre, så i kan konkurrere 
+            om at være den bedste. 
+            Held og lykke!
           </p>
       
       
@@ -115,14 +58,14 @@
     
       </div>
 
-      @*
-  <svg
+      
+  @*<svg
     class="fill-current bg-gray-500 text-white hidden md:block"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 1440 320"
   >
       <path
-        fill-opacity="1"
+            fill-opacity="1"
         d="M0,64L120,85.3C240,107,480,149,720,149.3C960,149,1200,107,1320,85.3L1440,64L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
       ></path>
   </svg>*@
@@ -130,6 +73,8 @@
 
   </div>
 </div>
+
+
 
 </body>
 
