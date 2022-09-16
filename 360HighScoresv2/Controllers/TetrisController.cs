@@ -36,19 +36,7 @@ namespace _360HighScoresv2.Controllers
             return View();
         }
         // GET: Tetris/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Tetris tetris = db.Tetris.Find(id);
-            if (tetris == null)
-            {
-                return HttpNotFound();
-            }
-            return View(tetris);
-        }
+       
         public ActionResult Liste()
         {
             var tetris = db.Tetris.OrderByDescending(m => m.Point);
@@ -81,19 +69,7 @@ namespace _360HighScoresv2.Controllers
 
         
         // GET: Tetris/Edit/5
-        public ActionResult Edit(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Tetris tetris = db.Tetris.Find(id);
-            if (tetris == null)
-            {
-                return HttpNotFound();
-            }
-            return View(tetris);
-        }
+        
 
         // POST: Tetris/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
