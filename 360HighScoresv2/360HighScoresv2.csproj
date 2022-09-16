@@ -204,8 +204,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Tetris\Create.cshtml" />
     <Content Include="Views\Tetris\Delete.cshtml" />
-    <Content Include="Views\Tetris\Details.cshtml" />
-    <Content Include="Views\Tetris\Edit.cshtml" />
     <Content Include="Views\Tetris\Index.cshtml" />
     <Content Include="Views\Faceits\Create.cshtml" />
     <Content Include="Views\Faceits\Delete.cshtml" />
@@ -213,8 +211,6 @@
     <Content Include="Views\Faceits\Edit.cshtml" />
     <Content Include="Views\Faceits\Index.cshtml" />
     <Content Include="Views\Tetris\Liste.cshtml" />
-    <Content Include="Views\Tetris\SendFile.cshtml" />
-    <Content Include="Views\Tetris\ProcessFile.cshtml" />
     <Content Include="Views\Home\Kategorier.cshtml" />
     <Content Include="Views\Faceits\Liste.cshtml" />
     <Content Include="Views\Home\AdminKategorier.cshtml" />
@@ -222,7 +218,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content" />
+    <Folder Include="Content\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

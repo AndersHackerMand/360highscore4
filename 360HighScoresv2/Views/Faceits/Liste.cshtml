@@ -10,33 +10,42 @@
 <h2>Index</h2>
 
 
-<table class="table">
-    <tr>
-        <th>Rang</th>
-        <th>
-            @Html.DisplayNameFor(model => model.Navn)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Elo)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @(rang++)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Navn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Elo)
-            </td>
-            
-        </tr>
-    }
-
-</table>
-
+<div class="flex flex-col">
+    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="py-4 inline-block   sm:px-6 lg:px-8">
+            <div class="overflow-hidden">
+                <table class="min-w-full text-center">
+                    <thead class="border-b bg-orange-600">
+                        <tr>
+                            <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                                Rang
+                            </th>
+                            <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                                @Html.DisplayNameFor(model => model.Navn)
+                            </th>
+                            <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                                @Html.DisplayNameFor(model => model.Elo)
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr class="bg-white border-b">
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    @(rang++)
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    @Html.DisplayFor(modelItem => item.Navn)
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    @Html.DisplayFor(modelItem => item.Elo)
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
