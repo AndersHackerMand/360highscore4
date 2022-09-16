@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" rel="stylesheet" />
 
 </head>
-<body>
+<body class="scrollbar-hide">
 <nav class="bg-gray-800">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
@@ -73,9 +73,8 @@
     </div>
   </div>
 </nav>
-    <div class="container mx-auto">
+    <div class="container body-content">
         @RenderBody()
-
     </div>
 
     @Scripts.Render("~/bundles/jquery")
@@ -85,25 +84,23 @@
 <footer class="p-4 bg-white shadow md:px-6 md:py-8 dark:bg-gray-900">
   <div class="sm:flex sm:items-center sm:justify-between">
     <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0">
-      <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-8" alt="Flowbite Logo" />
-      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"><span class="text-orange-600">360</span>Highscores</span>
     </a>
     <ul class="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
       <li>
-        <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+        <a href="#" class="mr-4 hover:underline md:mr-6 ">Omkring</a>
       </li>
       <li>
         <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
       </li>
       <li>
-        <a href="#" class="mr-4 hover:underline md:mr-6 ">Licensing</a>
+        <a href="#" class="mr-4 hover:underline md:mr-6 ">Licens</a>
       </li>
       <li>
-        <a href="#" class="hover:underline">Contact</a>
+        <a href="#" class="hover:underline">Kontakt</a>
       </li>
     </ul>
   </div>
-  <hr class="my-6 sm:mx-auto lg:my-8" />
   <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a class="hover:underline"><span class="text-orange-600">360</span>Highscores™</a>
   </span>
 </footer>
