@@ -12,11 +12,10 @@ namespace _360HighScoresv2.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Tetris
+    public partial class Minesweeper
     {
-        public string Navn { get; set; }
-        public int Point { get; set; }
         public int ID { get; set; }
-        public Nullable<int> Rank { get; set; }
+        public string Navn { get; set; }
+        public double Tid { get; set; }
     }
 }

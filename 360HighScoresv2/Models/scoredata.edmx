@@ -13,6 +13,18 @@
           <Property Name="Navn" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Elo" Type="int" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view '360highscores.dbo.Minesweeper' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Minesweeper">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Navn" />
+            <PropertyRef Name="Tid" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Navn" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tid" Type="float" Nullable="false" />
+        </EntityType>
         <EntityType Name="Tetris">
           <Key>
             <PropertyRef Name="ID" />
@@ -20,10 +32,18 @@
           <Property Name="Navn" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Point" Type="int" Nullable="false" />
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Rank" Type="int" />
         </EntityType>
         <EntityContainer Name="highscoresModelStoreContainer">
           <EntitySet Name="Faceit" EntityType="Self.Faceit" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tetris" EntityType="Self.Tetris" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Minesweeper" EntityType="Self.Minesweeper" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Minesweeper].[ID] AS [ID], 
+    [Minesweeper].[Navn] AS [Navn], 
+    [Minesweeper].[Tid] AS [Tid]
+    FROM [dbo].[Minesweeper] AS [Minesweeper]</DefiningQuery>
+          </EntitySet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -45,17 +65,29 @@
           <Property Name="Navn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Point" Type="Int32" Nullable="false" />
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Rank" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+        <EntityType Name="Minesweeper">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Navn" />
+            <PropertyRef Name="Tid" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Navn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tid" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Entities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Faceit" EntityType="Self.Faceit" />
           <EntitySet Name="Tetris" EntityType="Self.Tetris" />
+          <EntitySet Name="Minesweeper" EntityType="Self.Minesweeper" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="highscoresModelStoreContainer" CdmEntityContainer="Entities">
+        <EntityContainerMapping StorageEntityContainer="highscoresModelStoreContainer" CdmEntityContainer="Entities1">
           <EntitySetMapping Name="Faceit">
             <EntityTypeMapping TypeName="highscoresModel.Faceit">
               <MappingFragment StoreEntitySet="Faceit">
@@ -71,6 +103,16 @@
                 <ScalarProperty Name="Navn" ColumnName="Navn" />
                 <ScalarProperty Name="Point" ColumnName="Point" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Rank" ColumnName="Rank" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Minesweeper">
+            <EntityTypeMapping TypeName="highscoresModel.Minesweeper">
+              <MappingFragment StoreEntitySet="Minesweeper">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Navn" ColumnName="Navn" />
+                <ScalarProperty Name="Tid" ColumnName="Tid" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

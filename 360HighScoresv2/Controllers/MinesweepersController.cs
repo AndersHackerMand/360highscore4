@@ -1,5 +1,4 @@
-﻿using System.IO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -8,130 +7,111 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using _360HighScoresv2.Models;
-using System.Net.Mail;
-using System.Net.Configuration;
-using System.Configuration;
-
 
 namespace _360HighScoresv2.Controllers
 {
-    public class TetrisController : Controller
+    public class MinesweepersController : Controller
     {
         private Entities1 db = new Entities1();
 
-        // GET: Tetris
+        // GET: Minesweepers
         public ActionResult Index()
         {
-            var tetris = db.Tetris.OrderByDescending(m => m.Point);
-            return View(tetris);
-        }
-        public ActionResult SendFile()
-        {
-            return View();
+            var mines = db.Minesweeper.OrderByDescending(m => m.Tid);
+            return View(mines);
         }
 
-        public ActionResult ProcessFile()
-        {
-            return View();
-        }
-        // GET: Tetris/Details/5
+        // GET: Minesweepers/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Tetris tetris = db.Tetris.Find(id);
-            if (tetris == null)
+            Minesweeper minesweeper = db.Minesweeper.Find(id);
+            if (minesweeper == null)
             {
                 return HttpNotFound();
             }
-            return View(tetris);
+            return View(minesweeper);
         }
-        public ActionResult Liste()
-        {
-            var tetris = db.Tetris.OrderByDescending(m => m.Point);
-            return View(tetris);
-        }
-        // GET: Tetris/Create
+
+        // GET: Minesweepers/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Tetris/Create
+        // POST: Minesweepers/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Navn,Point,ID")] Tetris tetris)
+        public ActionResult Create([Bind(Include = "ID,Navn,Tid")] Minesweeper minesweeper)
         {
             if (ModelState.IsValid)
             {
-                db.Tetris.Add(tetris);
+                db.Minesweeper.Add(minesweeper);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(tetris);
+            return View(minesweeper);
         }
 
-        
-
-        
-        // GET: Tetris/Edit/5
+        // GET: Minesweepers/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Tetris tetris = db.Tetris.Find(id);
-            if (tetris == null)
+            Minesweeper minesweeper = db.Minesweeper.Find(id);
+            if (minesweeper == null)
             {
                 return HttpNotFound();
             }
-            return View(tetris);
+            return View(minesweeper);
         }
 
-        // POST: Tetris/Edit/5
+        // POST: Minesweepers/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Navn,Point,ID")] Tetris tetris)
+        public ActionResult Edit([Bind(Include = "ID,Navn,Tid")] Minesweeper minesweeper)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(tetris).State = EntityState.Modified;
+                db.Entry(minesweeper).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(tetris);
+            return View(minesweeper);
         }
 
-        // GET: Tetris/Delete/5
+        // GET: Minesweepers/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Tetris tetris = db.Tetris.Find(id);
-            if (tetris == null)
+            Minesweeper minesweeper = db.Minesweeper.Find(id);
+            if (minesweeper == null)
             {
                 return HttpNotFound();
             }
-            return View(tetris);
+            return View(minesweeper);
         }
 
-        // POST: Tetris/Delete/5
+        // POST: Minesweepers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Tetris tetris = db.Tetris.Find(id);
-            db.Tetris.Remove(tetris);
+            Minesweeper minesweeper = db.Minesweeper.Find(id);
+            db.Minesweeper.Remove(minesweeper);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

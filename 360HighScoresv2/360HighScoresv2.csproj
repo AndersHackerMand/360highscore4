@@ -130,11 +130,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\FaceitsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MinesweepersController.cs" />
     <Compile Include="Controllers\TetrisController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Faceit.cs">
+      <DependentUpon>scoredata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Minesweeper.cs">
       <DependentUpon>scoredata.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\scoredata.Context.cs">
@@ -169,8 +173,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Models\scoredata.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>scoredata.Context.cs</LastGenOutput>
       <DependentUpon>scoredata.edmx</DependentUpon>
+      <LastGenOutput>scoredata.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\scoredata.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -208,28 +212,27 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Tetris\Create.cshtml" />
     <Content Include="Views\Tetris\Delete.cshtml" />
-    <Content Include="Views\Tetris\Details.cshtml" />
-    <Content Include="Views\Tetris\Edit.cshtml" />
     <Content Include="Views\Tetris\Index.cshtml" />
     <Content Include="Views\Faceits\Create.cshtml" />
     <Content Include="Views\Faceits\Delete.cshtml" />
-    <Content Include="Views\Faceits\Details.cshtml" />
-    <Content Include="Views\Faceits\Edit.cshtml" />
     <Content Include="Views\Faceits\Index.cshtml" />
     <Content Include="Views\Tetris\Liste.cshtml" />
-    <Content Include="Views\Tetris\SendFile.cshtml" />
-    <Content Include="Views\Tetris\ProcessFile.cshtml" />
     <Content Include="Views\Home\Kategorier.cshtml" />
     <Content Include="Views\Faceits\Liste.cshtml" />
     <Content Include="Views\Home\AdminKategorier.cshtml" />
     <Content Include="Views\Home\Indsendscore.cshtml" />
+    <Content Include="Views\Minesweepers\Create.cshtml" />
+    <Content Include="Views\Minesweepers\Delete.cshtml" />
+    <Content Include="Views\Minesweepers\Details.cshtml" />
+    <Content Include="Views\Minesweepers\Edit.cshtml" />
+    <Content Include="Views\Minesweepers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Minesweeper\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
