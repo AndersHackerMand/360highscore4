@@ -207,8 +207,6 @@
     <Content Include="Views\Tetris\Index.cshtml" />
     <Content Include="Views\Faceits\Create.cshtml" />
     <Content Include="Views\Faceits\Delete.cshtml" />
-    <Content Include="Views\Faceits\Details.cshtml" />
-    <Content Include="Views\Faceits\Edit.cshtml" />
     <Content Include="Views\Faceits\Index.cshtml" />
     <Content Include="Views\Tetris\Liste.cshtml" />
     <Content Include="Views\Home\Kategorier.cshtml" />
