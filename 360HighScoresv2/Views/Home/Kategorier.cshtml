@@ -2,30 +2,19 @@
 @{
     ViewBag.Title = "Kategorier";
 }
-
-<div class="jumbotron">
-    <div class="row">
-        <div class="col-md-4 height:20px">
-            <button class="button button2" onclick="location.href='@Url.Action("Liste", "Tetris")'">TETRIS</button>
-        </div>
-        <div class="col-md-4">
-            <button class="button button2" onclick="location.href='@Url.Action("Liste", "Faceits")'">FACEIT</button>
-        </div>
-        <div class="col-md-4">
-            <button class="button button2">MINESWEEPER</button>
-        </div>
-        <div class="col-md-4">
-            <button class="button button2">...</button>
-        </div>
-        <div class="col-md-4">
-            <button class="button button2">...</button>
-        </div>
-        <div class="col-md-4">
-            <button class="button button2">...</button>
+<div class="bg-grey-lighter flex flex-col">
+    <div class="container max-w-prose mx-auto flex-1 flex-col items-center justify-center px-6 py-8">
+        <div class="bg-gray-800 px-6 py-8 rounded shadow-md text-black w-full grid grid-cols-3 gap-4 content-start">
+            <button onclick="location.href='@Url.Action("Liste", "Tetris")'" class=" bg-orange-600 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-300 hover:border-orange-400 rounded">
+                Tetris
+            </button>
+            <button onclick="location.href='@Url.Action("Liste", "Faceits")'" class=" bg-orange-600 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-300 hover:border-orange-400 rounded">
+                CSGO
+            </button>
+            <button onclick="location.href='@Url.Action("Indsendscore", "Faceits")'" class=" bg-orange-600 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-300 hover:border-orange-400 rounded">
+                MineSweeper
+            </button>
         </div>
 
     </div>
-
-
 </div>
-
