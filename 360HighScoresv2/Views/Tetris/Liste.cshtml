@@ -7,51 +7,18 @@
     var modelOrdered = Model.OrderByDescending(m => m.Point);
     int rang = 1;
 }
-
-<h3 class="font-medium leading-tight text-3xl mt-0 mb-2 text-orange-600">Tetris</h3>
-
-
-@*<table class="table" id="Table">
-    <tr>
-        <th>
-            Rank
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Navn)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Point)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in modelOrdered)
-    {
-
-        <tr>
-            <td>
-                @(rang++)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Navn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Point)
-            </td>
+<div class="container max-w-prose">
+    <h3 class="font-medium leading-tight text-3xl mt-0 mb-2 text-orange-600">Tetris</h3>
+</div>
 
 
-        </tr>
-    }
-
-</table>*@
-<div class="flex flex-col">
-<div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-    <div class="py-4 inline-block min-w-full sm:px-6 lg:px-8">
-        <div class="overflow-hidden">
-            <table class="min-w-full text-center">
-                <thead class="border-b bg-gray-800">
+<div class="container max-w-prose mx-auto w-2/3 items-center justify-center px-6 py-8">
+    <div class="bg-gray-800 px-6 py-8 rounded shadow-md text-black gap-4 content-start">
+        <div class="flex justify-center">
+            <table class=" text-center w-full">
+                <thead class="border-b bg-orange-600">
                     <tr>
-                        <th scope="col" class="text-sm font-medium text-orange-600 px-6 py-4">
+                        <th scope="col" class="text-sm font-medium text-white px-6 py-4">
                             Rang
                         </th>
                         <th scope="col" class="text-sm font-medium text-white px-6 py-4">
@@ -66,10 +33,9 @@
                     @foreach (var item in Model)
                     {
                         <tr class="bg-white border-b">
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                            @(rang++)
-                                </td>
-
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap bg-grey">
+                                @(rang++)
+                            </td>
                             <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                 @Html.DisplayFor(modelItem => item.Navn)
                             </td>
@@ -82,5 +48,4 @@
             </table>
         </div>
     </div>
-</div>
 </div>
