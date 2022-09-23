@@ -27,5 +27,6 @@ namespace _360HighScoresv2.Models
     
         public virtual DbSet<Faceit> Faceit { get; set; }
         public virtual DbSet<Tetris> Tetris { get; set; }
+        public virtual DbSet<Minesweeper> Minesweeper { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="highscoresModelStoreContainer" CdmEntityContainer="Entities">
     <EntitySetMapping Name="Faceit">
-      <EntityTypeMapping TypeName="highscoresModel.Faceit">
+      <EntityTypeMapping TypeName="IsTypeOf(highscoresModel.Faceit)">
         <MappingFragment StoreEntitySet="Faceit">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Navn" ColumnName="Navn" />
@@ -11,11 +11,21 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Tetris">
-      <EntityTypeMapping TypeName="highscoresModel.Tetris">
+      <EntityTypeMapping TypeName="IsTypeOf(highscoresModel.Tetris)">
         <MappingFragment StoreEntitySet="Tetris">
+          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Navn" ColumnName="Navn" />
           <ScalarProperty Name="Point" ColumnName="Point" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Minesweeper">
+      <EntityTypeMapping TypeName="IsTypeOf(highscoresModel.Minesweeper)">
+        <MappingFragment StoreEntitySet="Minesweeper">
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Navn" ColumnName="Navn" />
+          <ScalarProperty Name="Tid" ColumnName="Tid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

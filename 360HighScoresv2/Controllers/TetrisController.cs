@@ -26,16 +26,6 @@ namespace _360HighScoresv2.Controllers
             var tetris = db.Tetris.OrderByDescending(m => m.Point);
             return View(tetris);
         }
-        public ActionResult SendFile()
-        {
-            return View();
-        }
-
-        public ActionResult ProcessFile()
-        {
-            return View();
-        }
-        // GET: Tetris/Details/5
        
         public ActionResult Liste()
         {

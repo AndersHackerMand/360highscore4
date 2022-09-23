@@ -7,6 +7,7 @@
       <Diagram DiagramId="3973325b9aa64f03acdb51caa6e12bcc" Name="Diagram1">
         <EntityTypeShape EntityType="highscoresModel.Faceit" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="highscoresModel.Tetris" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="highscoresModel.Minesweeper" Width="1.5" PointX="4.75" PointY="1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
