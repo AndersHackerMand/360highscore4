@@ -219,8 +219,6 @@
     <Content Include="Views\Home\Indsendscore.cshtml" />
     <Content Include="Views\Minesweepers\Create.cshtml" />
     <Content Include="Views\Minesweepers\Delete.cshtml" />
-    <Content Include="Views\Minesweepers\Details.cshtml" />
-    <Content Include="Views\Minesweepers\Edit.cshtml" />
     <Content Include="Views\Minesweepers\Index.cshtml" />
     <Content Include="Views\Minesweepers\Liste.cshtml" />
   </ItemGroup>

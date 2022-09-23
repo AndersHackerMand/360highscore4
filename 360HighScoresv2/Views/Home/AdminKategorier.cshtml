@@ -1,31 +1,33 @@
-﻿
-@{
-    ViewBag.Title = "AdminKategorier";
+﻿@{
+    ViewBag.Title = "Kategorier";
 }
+<body class="bg-gray-800">
+    <div class="relative w-full md:max-w-2xl md:mx-auto text-center pt-10 pb-0">
+        <h1 class="font-bold text-white text-xl sm:text-2xl md:text-5xl leading-tight mb-6">
+            <span class="text-orange-600"></span>Hemmelig Admin Menu
+        </h1>
 
-<div class="jumbotron" style="background-color:grey">
-    <h1>SUPER HEMMLIG ADMIN MENU</h1>
-    <div class="row">
-        <div class="col-md-4 height:20px">
-            <button class="button button2" onclick="location.href='@Url.Action("Index", "Tetris")'">TETRIS</button>
-        </div>
-        <div class="col-md-4">
-            <button class="button button2" onclick="location.href='@Url.Action("Index", "Faceits")'">FACEIT</button>
-        </div>
-        <div class="col-md-4">
-            <button class="button button2">MINESWEEPER</button>
-        </div>
-        <div class="col-md-4">
-            <button class="button button2">...</button>
-        </div>
-        <div class="col-md-4">
-            <button class="button button2">...</button>
-        </div>
-        <div class="col-md-4">
-            <button class="button button2">...</button>
-        </div>
+        <p class="text-white md:text-xl md:px-18">
+            <span class="text-orange-600"></span>Super hemmelig admin menu, herinde kan du slette og oprette nye scores
+        </p>
+
+
 
     </div>
+    <div class="bg-gray-700 flex flex-col">
+        <div class="container max-w-prose mx-auto flex-1 flex-col items-center justify-center px-6 pt-2">
+            <div class="bg-gray-800 px-6 py-8 rounded shadow-md text-black w-full grid grid-cols-3 gap-4 content-start">
+                <button onclick="location.href='@Url.Action("Index", "Tetris")'" class=" bg-orange-600 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-300 hover:border-orange-400 rounded">
+                    Tetris
+                </button>
+                <button onclick="location.href='@Url.Action("Index", "Faceits")'" class=" bg-orange-600 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-300 hover:border-orange-400 rounded">
+                    CSGO
+                </button>
+                <button onclick="location.href='@Url.Action("Index", "Minesweepers")'" class=" bg-orange-600 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-300 hover:border-orange-400 rounded">
+                    MineSweeper
+                </button>
+            </div>
 
-
-</div>
+        </div>
+    </div>
+</body>
