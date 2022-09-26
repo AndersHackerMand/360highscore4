@@ -171,6 +171,7 @@
       <LastGenOutput>scoredata.Context.cs</LastGenOutput>
       <DependentUpon>scoredata.edmx</DependentUpon>
     </Content>
+    <Content Include="Models\scoredata.edmx.sql" />
     <Content Include="Models\scoredata.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>scoredata.edmx</DependentUpon>
