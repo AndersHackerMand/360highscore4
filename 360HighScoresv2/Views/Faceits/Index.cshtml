@@ -6,39 +6,27 @@
     int rang = 1;
 }
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>Rang</th>
-        <th>
-            @Html.DisplayNameFor(model => model.Navn)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Elo)
-        </th>
-        <th></th>
+<h2 class="bg-white font-medium text-5x1">CSGO</h2>
+
+<h1 class="bg-white font-medium text-5x1">
+    @Html.ActionLink("Tilføj score", "Create")
+</h1>
+<table class="w-full">
+    <tr class="w-1/2 bg-indigo-300">
+        <th class="p-2 text-center">Rang</th>
+        <th class="p-2 text-center">Navn</th>
+        <th class="p-2 text-center pr-4">Elo</th>
+        <th class="p-2 text-center pr-4"></th>
     </tr>
+    @foreach (var item in modelOrdered)
+    {
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @(rang++)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Navn)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Elo)
-        </td>
-        <td>
-    
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
-
+        <tr class="">
+            <td class="p-2 text-center bg-white">@(rang++)</td>
+            <td class="p-2 text-center bg-white">@Html.DisplayFor(modelItem => item.Navn)</td>
+            <td class="p-2 text-center bg-white">@Html.DisplayFor(modelItem => item.Elo)</td>
+            <td class="p-2 text-center bg-white">@Html.ActionLink("Delete", "Delete", new { id = item.ID })</td>
+        </tr>
+    }
 </table>
