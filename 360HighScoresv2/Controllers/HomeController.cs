@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using System.IO;
+
 
 namespace _360HighScoresv2.Controllers
 {
@@ -24,6 +27,7 @@ namespace _360HighScoresv2.Controllers
 
         public ActionResult Indsendscore()
         {
+
             return View();
         }
         
@@ -54,5 +58,6 @@ namespace _360HighScoresv2.Controllers
             
         }
 
+        
     }
 }
