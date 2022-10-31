@@ -14,7 +14,6 @@ namespace _360HighScoresv2.Controllers
     {
         private Entities db = new Entities();
 
-        // GET: Faceits
         public ActionResult Index()
         {
             var Csgo = db.Faceit.OrderByDescending(m => m.Elo);
@@ -28,17 +27,14 @@ namespace _360HighScoresv2.Controllers
 
         
 
-        // GET: Faceits/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Faceits/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
-        [ValidateAntiForgeryToken]
+
         public ActionResult Create([Bind(Include = "ID,Navn,Elo")] Faceit faceit)
         {
             if (ModelState.IsValid)
@@ -56,7 +52,7 @@ namespace _360HighScoresv2.Controllers
 
         
 
-        // GET: Faceits/Delete/5
+
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -71,9 +67,9 @@ namespace _360HighScoresv2.Controllers
             return View(faceit);
         }
 
-        // POST: Faceits/Delete/5
+
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+
         public ActionResult DeleteConfirmed(int id)
         {
             Faceit faceit = db.Faceit.Find(id);

@@ -14,7 +14,6 @@ namespace _360HighScoresv2.Controllers
     {
         private Entities db = new Entities();
 
-        // GET: Minesweepers
         public ActionResult Index()
         {
             return View(db.Minesweeper.ToList());
@@ -27,17 +26,12 @@ namespace _360HighScoresv2.Controllers
             return View(mine);
         }
 
-        // GET: Minesweepers/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Minesweepers/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,Navn,Tid")] Minesweeper minesweeper)
         {
             if (ModelState.IsValid)
@@ -50,7 +44,7 @@ namespace _360HighScoresv2.Controllers
             return View(minesweeper);
         }
 
-        // GET: Minesweepers/Delete/5
+
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -65,9 +59,7 @@ namespace _360HighScoresv2.Controllers
             return View(minesweeper);
         }
 
-        // POST: Minesweepers/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
             Minesweeper minesweeper = db.Minesweeper.Find(id);
