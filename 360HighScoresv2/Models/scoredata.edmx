@@ -4,29 +4,40 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="highscoresModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Faceit">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Navn" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Elo" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Tetris">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="Navn" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Point" Type="int" Nullable="false" />
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-        </EntityType>
-        <EntityContainer Name="highscoresModelStoreContainer">
-          <EntitySet Name="Faceit" EntityType="Self.Faceit" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Tetris" EntityType="Self.Tetris" Schema="dbo" store:Type="Tables" />
-        </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+    <Schema Namespace="highscoresModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="highscoresModelStoreContainer">
+    <EntitySet Name="Faceit" EntityType="highscoresModel.Store.Faceit" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tetris" EntityType="highscoresModel.Store.Tetris" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Minesweeper" EntityType="highscoresModel.Store.Minesweeper" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Faceit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Navn" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Elo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tetris">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Navn" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Point" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Rank" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Minesweeper">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Navn" />
+      <PropertyRef Name="Tid" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Navn" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Tid" Type="float" Nullable="false" />
+  </EntityType>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="highscoresModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -45,38 +56,59 @@
           <Property Name="Navn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Point" Type="Int32" Nullable="false" />
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Rank" Type="Int32" />
         </EntityType>
         <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Faceit" EntityType="Self.Faceit" />
           <EntitySet Name="Tetris" EntityType="Self.Tetris" />
+          <EntitySet Name="Minesweeper" EntityType="highscoresModel.Minesweeper" />
         </EntityContainer>
+        <EntityType Name="Minesweeper">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Navn" />
+            <PropertyRef Name="Tid" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Navn" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tid" Type="Double" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="highscoresModelStoreContainer" CdmEntityContainer="Entities">
-          <EntitySetMapping Name="Faceit">
-            <EntityTypeMapping TypeName="highscoresModel.Faceit">
-              <MappingFragment StoreEntitySet="Faceit">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Navn" ColumnName="Navn" />
-                <ScalarProperty Name="Elo" ColumnName="Elo" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Tetris">
-            <EntityTypeMapping TypeName="highscoresModel.Tetris">
-              <MappingFragment StoreEntitySet="Tetris">
-                <ScalarProperty Name="Navn" ColumnName="Navn" />
-                <ScalarProperty Name="Point" ColumnName="Point" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="highscoresModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Faceit">
+      <EntityTypeMapping TypeName="IsTypeOf(highscoresModel.Faceit)">
+        <MappingFragment StoreEntitySet="Faceit">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Navn" ColumnName="Navn" />
+          <ScalarProperty Name="Elo" ColumnName="Elo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tetris">
+      <EntityTypeMapping TypeName="IsTypeOf(highscoresModel.Tetris)">
+        <MappingFragment StoreEntitySet="Tetris">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Navn" ColumnName="Navn" />
+          <ScalarProperty Name="Point" ColumnName="Point" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Minesweeper">
+      <EntityTypeMapping TypeName="IsTypeOf(highscoresModel.Minesweeper)">
+        <MappingFragment StoreEntitySet="Minesweeper">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Navn" ColumnName="Navn" />
+          <ScalarProperty Name="Tid" ColumnName="Tid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -90,7 +122,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>

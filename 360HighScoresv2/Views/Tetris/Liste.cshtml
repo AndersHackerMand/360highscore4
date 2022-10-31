@@ -7,47 +7,44 @@
     var modelOrdered = Model.OrderByDescending(m => m.Point);
     int rang = 1;
 }
-<style>
-.table{
-           color: #28a4c9;
-           background-color: #3c3c3c;
-           border: none;
-       }
-       </style>
+<div class="container max-w-prose mx-auto pt-4">
+    <h3 class="font-medium text-3xl mt-0 mb-2 text-white text-center">Tetris</h3>
+</div>
 
-<h2>Tetris</h2>
-
-
-<table class="table" id="Table">
-    <tr>
-        <th>
-            Rank
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Navn)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Point)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in modelOrdered)
-    {
-
-        <tr>
-            <td>
-                @(rang++)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Navn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Point)
-            </td>
-
-
-        </tr>
-    }
-
-</table>
+<div class="container max-w-prose mx-auto w-2/3 items-center justify-center px-6 py-8">
+    <div class="bg-gray-800 px-6 py-8 rounded shadow-md text-black gap-4 content-start">
+        <div class="flex justify-center">
+            <table class=" text-center w-full">
+                <thead class="border-b bg-orange-600">
+                    <tr>
+                        <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                            Rang
+                        </th>
+                        <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                            @Html.DisplayNameFor(model => model.Navn)
+                        </th>
+                        <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                            @Html.DisplayNameFor(model => model.Point)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="bg-white border-b">
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap bg-grey">
+                                @(rang++)
+                            </td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                @Html.DisplayFor(modelItem => item.Navn)
+                            </td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                @Html.DisplayFor(modelItem => item.Point)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

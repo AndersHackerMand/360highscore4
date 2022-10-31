@@ -6,37 +6,46 @@
     var modelOrdered = Model.OrderByDescending(m => m.Elo);
     int rang = 1;
 }
+<div class="container max-w-prose mx-auto pt-4">
+    <h3 class="font-medium text-3xl mt-0 mb-2 text-white text-center">CSGO FaceIt Elo</h3>
+</div>
+<div class="container max-w-prose mx-auto w-2/3 items-center justify-center px-6 py-8">
+    <div class="bg-gray-800 px-6 py-8 rounded shadow-md text-black gap-4 content-start">
+        <div class="flex justify-center">
+            <table class=" text-center w-full">
+                <thead class="border-b bg-orange-600">
+                    <tr>
+                        <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                            Rang
+                        </th>
+                        <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                            @Html.DisplayNameFor(model => model.Navn)
+                        </th>
+                        <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                            @Html.DisplayNameFor(model => model.Elo)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="bg-white border-b">
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap bg-grey">
+                                @(rang++)
+                            </td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                @Html.DisplayFor(modelItem => item.Navn)
+                            </td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                @Html.DisplayFor(modelItem => item.Elo)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+ </div>
 
-<h2>Index</h2>
 
-
-<table class="table">
-    <tr>
-        <th>Rang</th>
-        <th>
-            @Html.DisplayNameFor(model => model.Navn)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Elo)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @(rang++)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Navn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Elo)
-            </td>
-            
-        </tr>
-    }
-
-</table>
 

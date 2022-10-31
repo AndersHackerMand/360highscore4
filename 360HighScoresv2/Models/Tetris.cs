@@ -16,6 +16,7 @@ namespace _360HighScoresv2.Models
     {
         public string Navn { get; set; }
         public int Point { get; set; }
-        public int ID { get; set; } 
+        public int ID { get; set; }
+        public Nullable<int> Rank { get; set; }
     }
 }
