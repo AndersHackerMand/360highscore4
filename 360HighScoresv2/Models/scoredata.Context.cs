@@ -13,10 +13,10 @@ namespace _360HighScoresv2.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities1 : DbContext
+    public partial class Entities : DbContext
     {
-        public Entities1()
-            : base("name=Entities1")
+        public Entities()
+            : base("name=Entities")
         {
         }
     
@@ -27,6 +27,5 @@ namespace _360HighScoresv2.Models
     
         public virtual DbSet<Faceit> Faceit { get; set; }
         public virtual DbSet<Tetris> Tetris { get; set; }
-        public virtual DbSet<Minesweeper> Minesweeper { get; set; }
     }
 }

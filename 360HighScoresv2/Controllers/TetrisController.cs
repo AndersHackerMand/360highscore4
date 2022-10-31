@@ -13,11 +13,12 @@ using System.Net.Configuration;
 using System.Configuration;
 
 
+
 namespace _360HighScoresv2.Controllers
 {
     public class TetrisController : Controller
     {
-        private Entities1 db = new Entities1();
+        private Entities db = new Entities();
 
         // GET: Tetris
         public ActionResult Index()

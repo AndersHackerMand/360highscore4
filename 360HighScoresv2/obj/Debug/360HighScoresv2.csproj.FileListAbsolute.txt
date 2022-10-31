@@ -163,6 +163,7 @@ C:\Users\acrim\OneDrive\Dokumenter\360highscores\360highscore4\360HighScoresv2\b
 C:\Users\acrim\OneDrive\Dokumenter\360highscores\360highscore4\360HighScoresv2\bin\Antlr3.Runtime.pdb
 C:\Users\acrim\OneDrive\Dokumenter\360highscores\360highscore4\360HighScoresv2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\acrim\OneDrive\Dokumenter\360highscores\360highscore4\360HighScoresv2\obj\Debug\360HighScoresv2.csproj.CopyComplete
+C:\Users\acrim\OneDrive\Dokumenter\360highscores\360highscore4\360HighScoresv2\obj\Debug\360HighScoresv2.csproj.AssemblyReference.cache
 C:\Users\johan\source\repos\AndersHackerMand\360highscore4\360HighScoresv2\bin\360HighScoresv2.dll.config
 C:\Users\johan\source\repos\AndersHackerMand\360highscore4\360HighScoresv2\bin\360HighScoresv2.dll
 C:\Users\johan\source\repos\AndersHackerMand\360highscore4\360HighScoresv2\bin\360HighScoresv2.pdb

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\acrim\OneDrive\Dokumenter\360highscores\360highscore4\360HighScoresv2\Models\scoredata.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\acrim\source\repos\360HighScoresv2\360HighScoresv2\Models\scoredata.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
